@@ -1,0 +1,6 @@
+* How does your data structure allow developers to access and manipulate the data?
+- You can access data from 2 directions (a matrix/2-dimensional array). Very useful for vector geometry (used in many videogames)
+* If a developer wanted to find a specific element in your data structure, how would you search for it?
+- screen.matrix[(x-coordinate)][(y-coordinate)]
+* What other real-world data can each structure represent?
+- A tall building with levels that are all different businesses, Cubby-hole/organization for kindergarteners
