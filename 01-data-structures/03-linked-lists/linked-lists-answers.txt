@@ -1,0 +1,13 @@
+1. What is Spatial Locality and why does it benefit performance?
+* Spatial Locality refers to the act of storing data close together, so as to minimize the amount of time between finding the next element in a pattern.
+
+2. Compare the performance of an Array to a Linked List using the Benchmark module.
+    - Compare the time it takes to create a 10,000 item Array to appending 10,000 items to a Linked List.
+    * It takes .003169 to create an array, vs .004525 to create a linked list. 
+      A linked list takes 1.43 times longer to create 5000 elements.
+    - Compare the time it takes to access the 5000th element of the Array and the 5000th Node in the Linked List.
+    * It takes 0.000003 to access from an array, vs 0.000276 to access an element in a linked list. 
+      A linked list takes 92 times longer to access the 5000th element.
+    - Compare the time it takes to remove the 5000th element from the Array to removing the 5000th Node in the Linked List.
+    * It takes 0.000012 to delete from an array, vs 0.000495 to delete from a linked list.
+      A linked list takes 41.25 times longer to delete the 5000th element
