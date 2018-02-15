@@ -1,6 +1,6 @@
 * How does your data structure allow developers to access and manipulate the data?
-- 
+- A queue allows developers to access only the first element(head) of the array, in order to follow certain protocol for the given task.
 * If a developer wanted to find a specific element in your data structure, how would you search for it?
-- 
+- @head to see the first element, @tail to see the last element, or the normal @queue[(index)] to find a specific element at index.
 * What other real-world data can each structure represent?
-- 
+- A line, Access to a server with lots of users
