@@ -1,0 +1,6 @@
+* How does your data structure allow developers to access and manipulate the data?
+- A stack allows developers to access only the last element of the array through stack.pop, in order to follow certain protocol for the given task.
+* If a developer wanted to find a specific element in your data structure, how would you search for it?
+- stack.top is the last element in the array, otherwise stack[(index)] gives you the element at index
+* What other real-world data can each structure represent?
+- Dishes, Dispenser (think PEZ), Clothes to wear (if you're not picky and you pick from the top of the pile)
