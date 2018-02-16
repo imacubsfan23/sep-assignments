@@ -1,0 +1,5 @@
+* Explain why doubling the size of the underlying array of your HashClass may be a poor idea.
+- It is possible that if you alter the already existing array, that you may lose or alter existing data. 
+  Also, allocating memory is a relatively slow operation. In order to avoid these potential problems, 
+  we allocate twice as much memory somewhere else, because it is faster and safer. We then move the data
+  to that new location, and remove it from its previous location.
