@@ -1,0 +1,27 @@
+1. Print both Trees to the console and compare the difference between your Binary Search Tree and your Heap.
+    The MinHeap prints in ascending order by rating value. The BinarySearchTree prints in order from root.
+    
+2. Insert all numbers from 1 to 100000 into both Trees, then use Benchmark to compare performance:
+
+                        user     system      total        real
+    Tree Insert     0.360000   0.010000   0.370000   (0.366472)
+    Heap Insert    13.100000   0.060000  13.160000   (13.185637)
+    
+                        user     system      total        real
+    Tree Search     0.040000   0.000000   0.040000   (0.031986)
+    Heap Search     0.030000   0.000000   0.030000   (0.033246)
+    
+                        user     system      total        real
+    Tree Delete     0.030000   0.000000   0.030000   (0.029872)
+    Heap Delete     0.040000   0.000000   0.040000   (0.033718)
+
+    - How much time does an average insertion consume in the Binary Search Tree compared to the Heap?
+    * The average insertion in a heap takes about 36 times the duration of a tree. This is likely due to the ordering within the insert function.
+    - How much time does finding 50000 in the Binary Search Tree consume compared to the Heap?
+    * The average search in a heap takes about 3/4 of the duration of a tree.
+    - How much time does the average deletion consume in a Binary Search Tree compared to the Heap?
+    * The average deletion in a heap takes about 4/3 of the duration of a tree. This is likely due to the ordering(lowering) within the delete function.
+    - When would you use a Binary Search Tree and why?
+    * In cases of wanting well-sorted data. Balanced binary trees are usually preferred in searches.
+    - When would you use an Heap and why?
+    * In cases of not needing to sort data very often, a heap may make for a better data structure.
