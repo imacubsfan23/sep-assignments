@@ -1,0 +1,15 @@
+LINE: 
+* How does your data structure allow developers to access and manipulate the data?
+- Developers can now find the person at the front and remove the person in the front. This will be helpful for queues such as a line, because we want the person who has been "waiting" the longest get their spot on the roller-coaster or whatever first.
+* If a developer wanted to find a specific element in your data structure, how would you search for it?
+- If they are searching for a "thrill-seeker" in "roller-coaster-line", they would write 'roller-coaster-line.search(thrill-seeker)' and it would return that thrill-seeker's name, or nil in the case of a thrill-seeker not being in that line.
+* What other real-world data can each structure represent?
+- A food dispenser, A conveyer belt, A fashion show, A slideshow
+
+SCREEN:
+* How does your data structure allow developers to access and manipulate the data?
+- You can access data from 2 directions (a matrix/2-dimensional array). Very useful for vector geometry (used in many videogames)
+* If a developer wanted to find a specific element in your data structure, how would you search for it?
+- screen.matrix[(x-coordinate)][(y-coordinate)]
+* What other real-world data can each structure represent?
+- A tall building with levels that are all different businesses, Cubby-hole/organization for kindergarteners
