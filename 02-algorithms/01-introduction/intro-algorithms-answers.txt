@@ -1,0 +1,55 @@
+1. Make Coffee
+
+        SET coffee to null
+        WHILE there is no coffee && user wants coffee
+            OBTAIN user's favorite coffee flavor
+            IF user owns a keurig THEN
+                SET user's flavor to current coffee
+                DETERMINE size of cup
+                SET water to back of machine
+                SET size of cup
+                SHOW cup of coffee brewing
+                SET coffee to the brewed coffee
+                SET there is coffee
+            ELSE
+                SET user's flavor to current coffee
+                SET filter
+                DETERMINE how many cups of coffee
+                CALCULATE amount of coffee grounds
+                SET water to back of machine
+                SHOW cup of coffee brewing
+                SET coffee to the brewed coffee
+                SET there is coffee
+            END
+        ENDWHILE
+        RETURN coffee
+
+2. Brush Teeth
+
+        IF teeth not brushed yet THEN
+            OBTAIN toothbrush
+            OBTAIN toothpaste
+            SET toothpaste on toothbrush
+            GET water on toothbrush and toothpaste
+            SET toothbrush to teeth
+            CALCULATE toothbrush strokes for cleanliness
+            SHOW toothbrush strokes
+            OBTAIN water
+            SET toothbrush to clean
+            SET water to mouth to clean
+            SET teeth to brushed
+        END
+
+3. Take out the Trash
+        
+        IF garbage is full THEN 
+            OBTAIN garbage bag from can
+            SET garbage bag to closed
+            GET garbage bag into hand
+            DETERMINE where the trash is going
+            DETERMINE the path to get there
+            SET legs to path
+            SET dumpster to open 
+            SET garbage bag into dumpster
+            SET dumpster to closed
+        END
