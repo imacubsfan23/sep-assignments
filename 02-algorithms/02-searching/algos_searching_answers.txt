@@ -1,0 +1,45 @@
+1. Given the alphabetically sorted collection (A-G) in this checkpoint, 
+   how many iterations would it take to find the value G 
+   using linear search?
+   
+   - 7, because the length of the array is 7, 
+     and G is the last element
+   
+2. Given the alphabetically sorted collection in this checkpoint, 
+   how many iterations would it take to find the value G 
+   using binary search?
+   
+   - 3, because we go from A-G to E-G, 
+     then we know that there is only one 
+     element larger than our new mid of F, 
+     which is our answer G. On the 3rd iteration,
+     G becomes our mid value, and we return it.
+   
+3. Calculate fib(10), fib(11), fib(12) by hand.
+
+   - fib(10) = 34 # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+   - fib(11) = 55 # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+   - fib(12) = 89 # fib(10) + fib(11)
+
+----------------------------------------------------------
+            LINEAR VS BINARY SEARCH QUESTIONS
+----------------------------------------------------------
+ 
+1. Given an unsorted collection of a million items, 
+   which algorithm would you choose between linear 
+   search and binary search? Would you use an iterative 
+   or recursive solution? Explain your reasoning.
+   
+   - I would use an iterative linear search, because binary 
+     search only works on sorted lists.
+   
+2. Given a sorted collection of a million items, 
+   which algorithm would you choose between linear 
+   search and binary search? Would you use an iterative 
+   or recursive solution? Explain your reasoning.
+   
+   - I would use a recursive binary search, because binary
+     search is much faster than linear search, and recursive
+     algorithms work faster than iteration (in most cases)
+   
+   
