@@ -64,4 +64,34 @@ Harrison_Ford.film_actor_hash['G'] = [Kerry_Washington, Woody_Harrelson, Aaron_P
 Woody_Harrelson.film_actor_hash['G'] = [Kerry_Washington, Harrison_Ford, Aaron_Paul]
 Aaron_Paul.film_actor_hash['G'] = [Kerry_Washington, Harrison_Ford, Woody_Harrelson]
 
-my_movie.find_kevin_bacon(Harrison_Ford)
+describe "Graph Search" do
+    it "returns Zoe Saldanas path" do
+        var = my_movie.find_kevin_bacon(Zoe_Saldanas)
+        expect(var.length).to eq 1
+        expect(var).to eq ["A"]
+    end
+    
+    it "returns David Schwimmer path" do
+        var = my_movie.find_kevin_bacon(David_Schwimmer)
+        expect(var.length).to eq 1
+        expect(var).to eq ["C"]
+    end
+    
+    it "returns Harrison Ford path" do
+        var = my_movie.find_kevin_bacon(Harrison_Ford)
+        expect(var.length).to eq 6
+        expect(var).to eq ["G", "F", "E", "D", "B", "A"]
+    end
+    
+    it "returns Sandra Oh path" do
+        var = my_movie.find_kevin_bacon(Sandra_Oh)
+        expect(var.length).to eq 0
+        expect(var).to eq []
+    end
+    
+    it "returns Matthew Perry path" do
+        var = my_movie.find_kevin_bacon(Matthew_Perry)
+        expect(var.length).to eq 1
+        expect(var).to eq ["B"]
+    end
+end
