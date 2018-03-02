@@ -12,9 +12,6 @@ Zoe_Saldanas = Actor.new("Zoe Saldanas")
 Helen_Hunt = Actor.new("Helen Hunt")
 Matthew_Perry = Actor.new("Matthew Perry")
 Jessie_Williams = Actor.new("Jessie Williams")
-David_Schwimmer = Actor.new("David Schwimmer")
-Patrick_Swazey = Actor.new("Patrick Swazey")
-Ellen_Pompeo = Actor.new("Ellen Pompeo")
 Justin_Baldoni = Actor.new("Justin Baldoni")
 Sandra_Oh = Actor.new("Sandra Oh")
 Chris_Pratt = Actor.new("Chris Pratt")
@@ -40,10 +37,6 @@ Lori_Singer.film_actor_hash['B'] = [Kevin_Bacon, Jessie_Williams, Matthew_Perry]
 Matthew_Perry.film_actor_hash['B'] = [Kevin_Bacon, Lori_Singer, Jessie_Williams]
 Jessie_Williams.film_actor_hash['B'] = [Kevin_Bacon, Lori_Singer, Matthew_Perry]
 
-David_Schwimmer.film_actor_hash['C'] = [Patrick_Swazey, Ellen_Pompeo]
-Patrick_Swazey.film_actor_hash['C'] = [David_Schwimmer, Ellen_Pompeo]
-Ellen_Pompeo.film_actor_hash['C'] = [David_Schwimmer, Patrick_Swazey]
-
 Matthew_Perry.film_actor_hash['D'] = [Chris_Pratt, Justin_Baldoni, Sandra_Oh]
 Chris_Pratt.film_actor_hash['D'] = [Matthew_Perry, Justin_Baldoni, Sandra_Oh]
 Justin_Baldoni.film_actor_hash['D'] = [Matthew_Perry, Chris_Pratt, Sandra_Oh]
@@ -64,14 +57,7 @@ Harrison_Ford.film_actor_hash['G'] = [Kerry_Washington, Woody_Harrelson, Aaron_P
 Woody_Harrelson.film_actor_hash['G'] = [Kerry_Washington, Harrison_Ford, Aaron_Paul]
 Aaron_Paul.film_actor_hash['G'] = [Kerry_Washington, Harrison_Ford, Woody_Harrelson]
 
-#=begin
-p my_movie.find_kevin_bacon(Zoe_Saldanas)
-p my_movie.find_kevin_bacon(David_Schwimmer)
-p my_movie.find_kevin_bacon(Sandra_Oh)
-p my_movie.find_kevin_bacon(Harrison_Ford)
-p my_movie.find_kevin_bacon(Matthew_Perry)
-#=end
-=begin
+
 describe "Graph Search" do
     it "returns Zoe Saldanas path" do
         var = my_movie.find_kevin_bacon(Zoe_Saldanas)
@@ -79,22 +65,16 @@ describe "Graph Search" do
         expect(var).to eq ["A"]
     end
     
-    it "returns David Schwimmer path" do
-        var1 = my_movie.find_kevin_bacon(David_Schwimmer)
-        expect(var1.length).to eq 0
-        expect(var1).to eq []
-    end
-    
     it "returns Harrison Ford path" do
         var2 = my_movie.find_kevin_bacon(Harrison_Ford)
         expect(var2.length).to eq 5
-        expect(var2).to eq ["B", "D", "E", "F", "G"]
+        expect(var2).to eq ["G", "F", "E", "D", "B"]
     end
     
     it "returns Sandra Oh path" do
         var3 = my_movie.find_kevin_bacon(Sandra_Oh)
-        expect(var3.length).to eq 2
-        expect(var3).to eq ["B", "D"]
+        expect(var3.length).to eq 3
+        expect(var3).to eq ["D", "B", "E"]
     end
     
     it "returns Matthew Perry path" do
@@ -103,4 +83,3 @@ describe "Graph Search" do
         expect(var4).to eq ["B"]
     end
 end
-=end

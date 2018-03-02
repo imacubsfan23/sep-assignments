@@ -5,7 +5,7 @@ class Movie
   def initialize(name)
     @name = name
   end
-  
+
   def find_kevin_bacon(movies=[], count=0, actor)
     if count < 7
       actor.film_actor_hash.each do |title, actors|
