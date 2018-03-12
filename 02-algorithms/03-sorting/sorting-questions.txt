@@ -1,0 +1,17 @@
+                    user     system      total        real
+bucket sort     0.000000   0.000000   0.000000 (  0.000061)
+heap sort       0.000000   0.000000   0.000000 (  0.000058)
+quick sort      0.000000   0.000000   0.000000 (  0.000076)
+
+-  Speculate on why you think some sort algorithms are faster 
+   than others and provide rationale as to your thought process.
+   
+* Some sort algorithms (such as heap sort in this case) 
+  take less time than others, because the more efficient
+  algorithms are basically doing less calculations than
+  slower ones. For example, in a quicksort, you only pass over
+  every item in the array once. In an algorithm such as
+  selection sort, however, it could be anywhere from passing
+  over 1 time, to up to 2 times through. This can really slow
+  a sort down if there are a lot of data to be sorted, and it
+  is mixed well.
