@@ -5,17 +5,17 @@ require_relative 'quick_sort'
 
 array = (1..50).to_a.shuffle!
 
-Benchmark.bm(1000) do |x|
+Benchmark.bm(10) do |x|
     x.report("bucket sort") do
-        bucket_sort(array)
+        bucket_array = array
+        bucket_sort(bucket_array)
     end
-    array.shuffle
     x.report("heap sort") do
-        heap_sort(array)
+        heap_array = array
+        heap_sort(heap_array)
     end
-    array.shuffle
     x.report("quick sort") do
-        quick_sort(array, 0, 50)
+        quick_array = array
+        quick_sort(quick_array, 0, 50)
     end
-    array.shuffle
 end

@@ -1,12 +1,12 @@
-                    user     system      total        real
-bucket sort     0.000000   0.000000   0.000000 (  0.000061)
-heap sort       0.000000   0.000000   0.000000 (  0.000058)
-quick sort      0.000000   0.000000   0.000000 (  0.000076)
+                 user     system      total        real
+bucket sort  0.000000   0.000000   0.000000 (  0.000057)
+heap sort    0.000000   0.000000   0.000000 (  0.000057)
+quick sort   0.000000   0.010000   0.010000 (  0.000067)
 
 -  Speculate on why you think some sort algorithms are faster 
    than others and provide rationale as to your thought process.
    
-* Some sort algorithms (such as heap sort in this case) 
+* Some sort algorithms (such as heap sort and bucket sort in this case) 
   take less time than others, because the more efficient
   algorithms are basically doing less calculations than
   slower ones. For example, in a quicksort, you only pass over
