@@ -1,0 +1,133 @@
+1. What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+    def goodbye_world(n)
+     puts "Goodbye World! #{n}"
+    end
+    
+* O(1) or constant, because no matter what n is inputted, there will only be 1 "repetition" of the loop
+
+2. What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+    def find_largest(collection)
+     largest = collection[0]
+     collection.length.times do |i|
+       if collection[i] >= largest
+         largest = collection[i]
+       end
+     end
+     largest
+    end
+    
+* O(n) or linear, because the loop visits every element of collection once.
+
+3. What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+    def find_largest(collection)
+     largest = collection[0][0]
+     collection.length.times do |i|
+       subcollection = collection[i]
+       subcollection.length.times do |i|
+         if subcollection[i] >= largest
+           largest = subcollection[i]
+         end
+       end
+     end
+     largest
+    end
+    
+* O(n^2) or quadratic, because each element of collection is visited collection.length amount of times
+    (for each collection element, there is basically an array of elements the same size as collection)
+
+4. What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+    def numbers(n)
+     if (n == 0)
+       return 0
+     elsif (n == 1)
+       return 1
+     else
+       return numbers(n-1) + numbers(n-2)
+     end
+    end
+    
+* O(2^n) or exponential, because each element is visited twice for each n.
+  For example, to find numbers(3),  you would have to add (numbers(1)+numbers(2)) 
+  which simplifies to 1 + (numbers(0) + numbers(1)), which
+  simplifies to 1 + 0 + 1. numbers(3) = 2. This took 4 iterations of numbers.
+  If we were to, however, find numbers (4), we would theoretically have to add what we did with numbers(3)
+  to numbers(4), which would take 4 * 2 iterations essentially. numbers(4) takes 8 iterations, 
+  and therefore, the relationship between these two numbers are 2^n.
+
+5. What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+    def iterative(n)
+     num1 = 0
+     num2 = 1
+    
+     i = 0
+     while i < n-1
+       tmp = num1 + num2
+       num1 = num2
+       num2 = tmp
+       i+=1
+     end
+    
+     num2
+    end
+    
+* O(n). Though it does the same as the `numbers` function from question 4, its implementation
+  is much faster, because it adds numbers as it iterates from 0, instead of repeating calculations
+  each time n is increased.
+
+6. What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+    def sort(collection, from=0, to=nil)
+     if to == nil
+       # Sort the whole collection, by default
+       to = collection.count - 1
+     end
+     if from >= to
+       # Done sorting
+       return
+     end
+     # Take a pivot value, at the far left
+     pivot = collection[from]
+     # Min and Max pointers
+     min = from
+     max = to
+     # Current free slot
+     free = min
+    
+     while min < max
+       if free == min # Evaluate collection[max]
+         if collection[max] <= pivot # Smaller than pivot, must move
+           collection[free] = collection[max]
+           min += 1
+           free = max
+         else
+           max -= 1
+         end
+       elsif free == max # Evaluate collection[min]
+         if collection[min] >= pivot # Bigger than pivot, must move
+           collection[free] = collection[min]
+           max -= 1
+           free = min
+         else
+           min += 1
+         end
+       else
+         raise "Inconsistent state"
+       end
+     end
+    
+     collection[free] = pivot
+    
+     sort collection, from, free - 1
+     sort collection, free + 1, to
+    
+     collection
+    end
+
+* O(n log n), because as each element is set into its correct location, it does not need to be visited again.
+  While at first glance, it seems quadratic, once you set a pivot to its correct location,
+  it is permanently in that position, and the collection essentially shrinks, making this an n log n complexity problem

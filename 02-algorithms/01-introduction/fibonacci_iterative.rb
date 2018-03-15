@@ -10,7 +10,7 @@ def fib(n)
     n1
 end
 
-10.times do |i|
+20.times do |i|
   print "#{fib(i)}  "
 end
 puts ""
