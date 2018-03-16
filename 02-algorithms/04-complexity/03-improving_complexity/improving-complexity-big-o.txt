@@ -1,0 +1,10 @@
+              |              |
+              |  Big-O       |  Explanation
+--------------------------------------------------------------------------------------------------------------------------
+Version One   |  O(n^2)      |  In its worst case, the code will visit each element n (array.length) amount of times.
+              |              |  
+Version Two   |  O(n log n)  |  Performs a quick sort, so that it sets an element in the correct position, 
+              |              |  then essentially shrinks the amount of elements it has left to visit.
+              |              |
+Version Three |  O(n log n)  |  Still performs a quick sort, but does not use up space where methods need to be pointed to, 
+              |              |  because it uses the quicksort that ruby provides.
