@@ -1,0 +1,103 @@
+1. What data types do each of these values represent?
+ * "A Clockwork Orange"
+    - String
+ * 42
+    - Integer
+ * 09/02/1945
+    - String
+ * 98.7
+    - Float
+ * $15.99
+    - Float or String if dollar sign is included.
+
+* Explain in your own words when a database might be used.
+ * When data needs to be stored while a user is away from/ logged out of the software.
+
+* Explain when a text file might be used.
+ * When you are not accessing or retrieving files very often. If there is less data, it may also be quicker to use a text file.
+
+* Describe one difference between SQL and other programming languages.
+ * SQL is a declarative programming language, whereas most programming languages are procedural. This means that SQL is used to directly find a result, rather than
+ using algorithms to do so.
+ 
+* In your own words, explain how the pieces of a database system fit together at a high level.
+ * The column contains rows of data, where at an intersection of the two is a single datum.
+ 
+* Explain the meaning of table, row, column, and value.
+ * The table contains columns that contain datatypes that make it easier to find a specific value.
+   A value is found at the intersection of a row and column.
+   
+* List 3 data types that can be used in a table.
+ * Integer, Float, Object
+ 
+* Given this payments table, provide an English description of the following queries and include their results:
+```
+ SELECT date, amount
+ FROM payments;
+```
+Result:
+```
+ date	        amount
+ 2016-05-01	    1500
+ 2016-05-10	    37
+ 2016-05-15	    124.93
+ 2016-05-23	    54.72
+```
+ * Explanation: from the payments database, select every piece of data with a date and amount.
+```
+ SELECT amount
+ FROM payments
+ WHERE amount > 500;
+```
+Result:
+```
+ amount
+ 1500
+```
+ * Explanation: from the payments database, select every piece of data with an amount greater than 500.
+```
+ SELECT *
+ FROM payments
+ WHERE payee = 'Mega Foods';
+```
+Result:
+```
+ date	    payee	    amount	memo
+ 2016-05-15	Mega Foods	124.93	Groceries
+```
+ * Explanation: from the payments database, select every piece of data with a payee of Mega Foods.
+ 
+* Given this users table, write SQL queries using the following criteria and include the output:
+ * The email and sign-up date for the user named DeAndre Data. 
+ ```
+  SELECT email, signup
+  FROM users
+  WHERE name = 'DeAndre Data'; 
+ ```
+ Result: 
+ ```
+  email	            signup
+  datad@comcast.net	2008-01-20
+ ```
+ * The user ID for the user with email 'aleesia.algorithm@uw.edu'. 
+ ```
+  SELECT ID
+  FROM users
+  WHERE email = 'aleesia.algorithm@uw.edu';
+ ```
+ Result:
+ ```
+ userid
+ 1
+ ```
+ * All the columns for the user ID equal to 4.
+ ```
+  SELECT *
+  FROM users
+  WHERE ID = 4;
+ ```
+ Result:
+ ```
+ userid	name	        email	            signup
+ 4	    Brandy Boolean	bboolean@nasa.gov	1999-10-15
+ ```
